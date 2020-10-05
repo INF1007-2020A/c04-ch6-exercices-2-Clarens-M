@@ -17,7 +17,9 @@ def color_name_to_hex(colors: list) -> list:
     i = 0
     couleur = []
     for i in color:
-        couleur.append((i, cnames[i]))
+        if i in cnames:
+            le_tuple = (i, cnames[i])
+            couleur.append(le_tuple)
     return couleur
 
 
