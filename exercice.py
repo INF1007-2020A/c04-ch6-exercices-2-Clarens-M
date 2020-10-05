@@ -25,17 +25,38 @@ def color_name_to_hex(colors: list) -> list:
 
 def create_list() -> list:
     # TODO: Créer une liste des 10 000 premiers entiers positif, sauf pour les entiers de 15 à 350
-    liste = []
-    for i in range(0, 10000):
-        if i < 15 or i > 350:
-            liste.append(i)
+#    liste = []
+#    for i in range(0, 10000):
+#        if i < 15 or i > 350:
+#            liste.append(i)
+ 
+    liste = [i for i in range(10000) if i < 15 or i > 350]
+    
+    
     return liste
 
 
 def compute_mse(model_dict: dict) -> dict:
     # TODO: Calculer l'erreur quadratique moyen pour chaque modèle. Retourner un dictionnaire contenant les MSE.
-
-    return {}
+#    modèles = {}
+#    liste = []
+#    somme = 0
+#    moyenne = 0
+ 
+    err = 0
+    for keys, values in model_dict:
+        liste.append(keys)
+        
+        for elem in values:
+            err += (elem[0]-elem[1])**2
+    model_dict[keys] = err/len(values)    
+#    for clé in liste:
+#        somme = sum(dico[clé])
+#        moyenne = 1/len(dico[clé]) 
+    
+    
+    
+    return model_dict
 
 
 def main() -> None:
