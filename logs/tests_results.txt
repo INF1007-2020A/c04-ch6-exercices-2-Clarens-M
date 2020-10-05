@@ -21,9 +21,9 @@ ERROR: test_compute_mse (__main__.TestExercice)
 Traceback (most recent call last):
   File "test_exercice.py", line 59, in test_compute_mse
     output = exercice.compute_mse(value)
-  File "/home/runner/work/c04-ch6-exercices-2-Clarens-M/c04-ch6-exercices-2-Clarens-M/exercice.py", line 48, in compute_mse
-    liste.append(keys)
-NameError: name 'liste' is not defined
+  File "/home/runner/work/c04-ch6-exercices-2-Clarens-M/c04-ch6-exercices-2-Clarens-M/exercice.py", line 50, in compute_mse
+    err += (elem[0]-elem[1])**2
+IndexError: string index out of range
 
 ----------------------------------------------------------------------
 Ran 4 tests in 0.002s
