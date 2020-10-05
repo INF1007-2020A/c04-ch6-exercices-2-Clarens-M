@@ -43,10 +43,9 @@ def compute_mse(model_dict: dict) -> dict:
 #    somme = 0
 #    moyenne = 0
  
-    err = 0
     for keys, values in model_dict:
-        liste.append(keys)
-        
+#        liste.append(keys)
+        err = 0
         for elem in values:
             err += (elem[0]-elem[1])**2
     model_dict[keys] = err/len(values)    
